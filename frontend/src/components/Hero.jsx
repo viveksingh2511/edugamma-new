@@ -30,6 +30,16 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className={`space-y-8 transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
+            {/* Main heading */}
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+              {heroData.title}
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-xl text-gray-600 leading-relaxed">
+              {heroData.subtitle}
+            </p>
+
             {/* Badges */}
             <div className="flex flex-wrap gap-3">
               {heroData.badges.map((badge, index) => {
@@ -46,34 +56,6 @@ const Hero = () => {
                 );
               })}
             </div>
-
-            {/* Main heading */}
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-              {heroData.title}
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-xl text-gray-600 leading-relaxed">
-              {heroData.subtitle}
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group"
-              >
-                {heroData.primaryCTA}
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
-              >
-                {heroData.secondaryCTA}
-              </Button>
-            </div>
           </div>
 
           {/* Right image */}
@@ -87,7 +69,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/20 to-transparent"></div>
             </div>
             {/* Floating card */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 animate-float">
+            {/* <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 animate-float">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
                   <Cloud className="w-6 h-6 text-emerald-600" />
@@ -97,7 +79,7 @@ const Hero = () => {
                   <p className="text-2xl font-bold text-gray-900">500+ Schools</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import heroImage from "./asset/right-img.jpg";
 // Mock data for Edugamma School ERP Platform
 
 export const heroData = {
@@ -10,7 +11,7 @@ export const heroData = {
     { icon: "Shield", label: "Secure & Scalable" },
     { icon: "HeadphonesIcon", label: "24/7 Support" }
   ],
-  heroImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+  heroImage: heroImage
 };
 
 export const whyChooseData = {
